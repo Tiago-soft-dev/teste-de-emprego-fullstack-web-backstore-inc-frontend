@@ -3,6 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { apiConect } from './api/apiConect'
+import Header from './Components/Header/Header'
+import Card from './Components/Card/Card'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
  function App() {
 
@@ -12,17 +16,20 @@ import { apiConect } from './api/apiConect'
 //   return data
 // }
 
-const fetchData = async()=>{
-  const data = await  apiConect.apiGetAll()
-  console.log(data);
-  return data
-}
-fetchData()
+// const fetchData = async()=>{
+//   const data = await  apiConect.apiGetAll()
+//   console.log(data);
+//   return data
+// }
+// fetchData()
   
   return (
-    <>
-      <h1></h1>
-    </>
+    <div className='appContainer'>
+    <Header />
+    <Card     
+    />
+    <ToastContainer />  
+    </div>
   )
 }
 

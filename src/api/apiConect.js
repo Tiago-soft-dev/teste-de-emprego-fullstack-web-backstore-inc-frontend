@@ -2,19 +2,23 @@
 
  export const apiConect = {
    apiGetAll : async()=>{
+       
        try {
-           const response = await fetch(urlBase)
+           const response = await fetch(urlBase)          
+           
+           
            if(!response.ok){
                console.log('erro ao conectar');
                return null
            }
            const data = await response.json()
-          
+           
+           
            return data
            
        } catch (error) {
            console.log('erro ao conectar: ', error)
-           return null
+           return 
        }
        
    },
@@ -38,27 +42,20 @@
    apiPost: async (body)=>{
     //const body = req.body
     try {
-        const response = await fetch(urlBase, {
+        return await fetch(urlBase, {
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json'
             },
             body: JSON.stringify(body)
+                       
         })
 
-        if(!response.ok){
-            console.error('ocorreu um erro: ', response.statusText)
-            return null
-        }
-
-        const data = await response.json()
-        return data
-
     } catch (error) {
-        console.error('ocorreu um erro: ', error.message)
-        return null
+        console.error('erro ao enviar dados: ', error.message)
+        return null    
     }
-
+    
    },
 
    apiUpdate: async(id, body)=>{
