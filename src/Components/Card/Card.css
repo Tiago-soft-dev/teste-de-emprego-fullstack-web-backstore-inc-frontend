@@ -89,12 +89,12 @@
     
 }
 
-#btnTrash {
+#btnTrash, #btnEdit {
     color: #fff;
     background-color: #fff;
     padding: 5px;
 }
 
-#btnTrash:hover{
+#btnTrash:hover, #btnEdit:hover{
     border: none;
 }

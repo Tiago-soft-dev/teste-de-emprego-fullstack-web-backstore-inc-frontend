@@ -67,13 +67,18 @@
             },
             body: JSON.stringify(body)
         })
+
+            console.log(71, response);
+            
             if(!response.ok){
                 console.error('erro na requisição: ', response.statusText)
                 return null
             }
 
             const data = await response.json()
-            return data
+            //console.log(data, 79);
+            
+            return response
 
     } catch (error) {
         console.error('erro na requisicao: ',  error.message)

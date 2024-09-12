@@ -7,6 +7,7 @@ import Header from './Components/Header/Header'
 import Card from './Components/Card/Card'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import CardUpdate from './Components/CardUpdate/CardUpdate'
 
  function App() {
 
@@ -26,8 +27,10 @@ import 'react-toastify/dist/ReactToastify.css';
   return (
     <div className='appContainer'>
     <Header />
-    <Card     
-    />
+   
+       
+    <Card />
+    <CardUpdate/>
     <ToastContainer />  
     </div>
   )
