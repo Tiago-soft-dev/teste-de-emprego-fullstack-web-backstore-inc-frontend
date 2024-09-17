@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { apiConect } from '../../api/apiConect';
 import Button from '../Button/Button';
 import './Card.css';
-import CardUpdate from '../CardUpdate/CardUpdate';
+
 
 export default function Card() {
 
@@ -13,10 +13,8 @@ export default function Card() {
     const [itemUpdate, setItemUpdate] = useState()
 
 
-
     async function handleSubmit(event) {
         //console.log(13, event);
-
 
         event.preventDefault()
 
@@ -116,26 +114,26 @@ export default function Card() {
             <div>
               <form>
               <div>
-        <label htmlFor='nome'>Nome </label>
-        <input value={itemUpdate.nome} />
-    </div>
-    <div>
-        <label htmlFor='serial'>Serial</label>
-        <input value={itemUpdate.serial}/>
-    </div>
+                <label htmlFor='nome'>Nome </label>
+                <input value={itemUpdate.nome} />
+             </div>
+            <div>
+                <label htmlFor='serial'>Serial</label>
+                <input value={itemUpdate.serial}/>
+            </div>
 
-    <div>
-        <label htmlFor='marca'>Marca</label>
-        <input value={itemUpdate.marca}/>
-    </div>
-    <div>
-        <label htmlFor='modelo'>Modelo</label>
-        <input value={itemUpdate.modelo}/>
-    </div>
-    <div>
-        <label htmlFor='id'>ID </label>
-        <input value={itemUpdate._id}/>
-    </div>
+            <div>
+                <label htmlFor='marca'>Marca</label>
+                <input value={itemUpdate.marca}/>
+            </div>
+            <div>
+                <label htmlFor='modelo'>Modelo</label>
+                <input value={itemUpdate.modelo}/>
+            </div>
+            <div>
+                <label htmlFor='id'>ID </label>
+                <input value={itemUpdate._id}/>
+            </div>
               </form>
             </div>
 
@@ -144,34 +142,39 @@ export default function Card() {
         <form onSubmit={itemUpdateForm}>
         
        
-            <div>
-                
-        <label htmlFor='nome'>Nome</label>
-        <input type="text" id='nome' name='nome' placeholder='nome do produto...' />
-    </div>
-    <div>
-        <label htmlFor='serial'>Serial</label>
-        <input type='text' id='serial' name='serial' placeholder='serial do produto...'></input>
-    </div>
+        <div>   
+            <label htmlFor='nome'>Nome</label>
+            <input type="text" id='nome' name='nome' placeholder='nome do produto...' />
+        </div>
 
-    <div>
-        <label htmlFor='marca'>Marca</label>
-        <input type='text' id='marca' name='marca' placeholder='marca do produto...'></input>
-    </div>
-    <div>
-        <label htmlFor='modelo'>Modelo</label>
-        <input type='text' id='modelo' name='modelo' placeholder='modelo do produto...'></input>
+        <div>
+            <label htmlFor='serial'>Serial</label>
+            <input type='text' id='serial' name='serial' placeholder='serial do produto...'></input>
+        </div>
+
+        <div>
+            <label htmlFor='marca'>Marca</label>
+            <input type='text' id='marca' name='marca' placeholder='marca do produto...'></input>
+        </div>
+
+        <div>
+            <label htmlFor='modelo'>Modelo</label>
+            <input type='text' id='modelo' name='modelo' placeholder='modelo do produto...'></input>   
+        </div>
+
+        <div>
+                <input type='text' id='id' name='id' value={itemUpdate._id} hidden/>  
+        </div>    
         
-    </div>
-    <div>
-            <input type='text' id='id' name='id' value={itemUpdate._id} hidden/>  
-    </div>    
+        <button type='submit'>Atualizar</button>
         
-        <button type='submit'>ATUALIZAR</button>
         </form>
-           
-                     
+
+        <br></br>
+        
+                               
            </> : <>
+
             <div className='cardCadastrar'>
 
 
@@ -180,6 +183,7 @@ export default function Card() {
         <label htmlFor='nome'>Nome do Produto</label>
         <input type="text" id='nome' name='nome' placeholder='Nome do Produto' />
     </div>
+
     <div>
         <label htmlFor='serial'>Serial do Produto</label>
         <input type='text' id='serial' name='serial' placeholder='Serial do Produto'></input>
@@ -189,14 +193,15 @@ export default function Card() {
         <label htmlFor='marca'>Marca do Produto</label>
         <input type='text' id='marca' name='marca' placeholder='Marca do Produto'></input>
     </div>
+
     <div>
         <label htmlFor='modelo'>Modelo do Produto</label>
         <input type='text' id='modelo' name='modelo' placeholder='Modelo do Produto'></input>
     </div>
+
     <div className='buttonCadastrar'>
         <Button key='cadastrar' nome='Cadastrar' type='submit' value='cadastrar' />
-       
-    </div>
+   </div>
 </form>
 
 
