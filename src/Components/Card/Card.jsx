@@ -216,7 +216,7 @@ export default function Card() {
 </div>
 
 <div>
-    <ul>
+    <ul id='ulCard'>
 
         {pesquisar.map((item, index) => (<li key={index}>item: {item.nome}, serial: {item.serial}, marca: {item.marca}, modelo: {item.modelo} <button id='btnEdit' onClick={()=>handleSubmitEdit(item)}>✏️</button> <button id='btnTrash' onClick={() => deleteItem(item._id)}>🗑️</button></li>))        
         }

@@ -98,3 +98,7 @@
 #btnTrash:hover, #btnEdit:hover{
     border: none;
 }
+
+#ulCard{
+    list-style-type: none;
+}
