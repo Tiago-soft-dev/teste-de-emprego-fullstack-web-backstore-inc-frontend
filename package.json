@@ -1,6 +1,5 @@
 {
   "name": "teste-de-emprego-fullstack-web-backstore-inc-frontend",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
