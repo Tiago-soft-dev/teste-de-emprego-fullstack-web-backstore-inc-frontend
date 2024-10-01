@@ -1,4 +1,4 @@
- const urlBase = 'https://teste-de-emprego-fullstack-web-backstore.onrender.com'
+ const urlBase = 'https://teste-de-emprego-fullstack-web-backstore.onrender.com/backstore'
 
  export const apiConect = {
    apiGetAll : async()=>{
