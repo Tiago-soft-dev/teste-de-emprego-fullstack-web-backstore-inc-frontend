@@ -1,4 +1,4 @@
- const urlBase = 'http://localhost:3000/backstore/'
+ const urlBase = 'https://teste-de-emprego-fullstack-web-backstore.onrender.com'
 
  export const apiConect = {
    apiGetAll : async()=>{
